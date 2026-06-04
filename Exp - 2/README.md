@@ -116,7 +116,9 @@ In this first task, you will connect to VS Code IDE and configure the environmen
 
    - In the same terminal, run the following command:
    
-      %% HAS_CODE %%
+      ```bash
+      wget https://aws-tc-largeobjects.s3.us-west-2.amazonaws.com/CUR-TF-200-ACCDEV-2-91558/02-lab-s3/code.zip -P /home/ec2-user/environment
+      ```
    
     - The `code.zip` file is downloaded to the VS Code IDE. The file is listed in the left navigation pane.
 
