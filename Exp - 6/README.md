@@ -103,3 +103,283 @@ login as: ec2-user
 ```
 
 This will connect you to the EC2 instance.
+
+
+--- 
+# EC2 SSH Command Reference
+
+Essential Linux commands for students connected to AWS EC2 via SSH.
+
+## Difficulty Levels
+
+- Beginner
+- Intermediate
+- Advanced
+
+---
+
+# 1. System Info
+
+## OS & Kernel Info
+See which Linux distro and kernel version is running.
+
+```bash
+uname -a && cat /etc/os-release
+```
+
+**Level:** Beginner
+
+### CPU Info
+List CPU cores and architecture.
+
+```bash
+lscpu
+```
+
+**Level:** Beginner
+
+### RAM Usage
+Check total and available memory.
+
+```bash
+free -h
+```
+
+**Level:** Beginner
+
+### System Uptime
+How long the server has been running.
+
+```bash
+uptime
+```
+
+**Level:** Beginner
+
+### Environment Variables
+List all environment variables set in the session.
+
+```bash
+printenv
+```
+
+**Level:** Beginner
+
+---
+
+# 2. Files & Directories
+
+### List Files
+Show all files including hidden ones with details.
+
+```bash
+ls -lah
+```
+
+**Level:** Beginner
+
+### Current Directory
+Print working directory.
+
+```bash
+pwd
+```
+
+**Level:** Beginner
+
+### Create & Edit File
+Create a file and write to it.
+
+```bash
+echo 'Hello Cloud' > myfile.txt
+cat myfile.txt
+```
+
+**Level:** Beginner
+
+### Find Files
+Search for files by name recursively.
+
+```bash
+find / -name '*.log' 2>/dev/null
+```
+
+**Level:** Intermediate
+
+### File Permissions
+Change file permissions.
+
+```bash
+chmod 755 myfile.txt
+ls -l myfile.txt
+```
+
+**Level:** Intermediate
+
+### Copy/Move Files
+Copy and move files between directories.
+
+```bash
+cp myfile.txt /tmp/
+mv /tmp/myfile.txt /tmp/backup.txt
+```
+
+**Level:** Beginner
+
+### Compress Files
+Create a tar.gz archive.
+
+```bash
+tar -czvf archive.tar.gz /var/log/*.log
+```
+
+**Level:** Intermediate
+
+---
+
+# 3. Processes
+
+### Running Processes
+Show all currently running processes.
+
+```bash
+ps aux
+```
+
+**Level:** Beginner
+
+### Live Process Monitor
+Real-time CPU and memory usage.
+
+```bash
+top
+```
+
+**Level:** Beginner
+
+### Check Service Status
+Check if a service like nginx is running.
+
+```bash
+systemctl status nginx
+```
+
+**Level:** Beginner
+
+---
+
+# 4. Networking
+
+### IP Address
+Show network interfaces and IP addresses.
+
+```bash
+ip addr show
+```
+
+**Level:** Beginner
+
+### Open Ports
+List all listening ports.
+
+```bash
+ss -tuln
+```
+
+**Level:** Intermediate
+
+### Test Connectivity
+Ping a host to check internet access.
+
+```bash
+ping -c 4 google.com
+```
+
+**Level:** Beginner
+
+### DNS Lookup
+Resolve a hostname to IP.
+
+```bash
+nslookup example.com
+```
+
+**Level:** Beginner
+
+### Trace Route
+Trace hops to a destination.
+
+```bash
+traceroute google.com
+```
+
+**Level:** Intermediate
+
+### HTTP Request Test
+Test an HTTP endpoint (useful for APIs).
+
+```bash
+curl -I https://google.com
+```
+
+**Level:** Intermediate
+
+---
+
+# 5. Disk & Storage
+
+### Disk Usage Summary
+See total disk space used per partition.
+
+```bash
+df -h
+```
+
+**Level:** Beginner
+
+### Folder Size
+Find which folders use the most space.
+
+```bash
+du -sh /var/* 2>/dev/null | sort -rh | head -10
+```
+
+**Level:** Intermediate
+
+### List Block Devices
+Show all attached disks and EBS volumes.
+
+```bash
+lsblk
+```
+
+**Level:** Beginner
+
+---
+
+# 6. Users & Permissions
+
+### Current User
+Who am I logged in as?
+
+```bash
+whoami
+```
+
+**Level:** Beginner
+
+### All Users
+List all users on the system.
+
+```bash
+cat /etc/passwd | cut -d: -f1
+```
+
+**Level:** Beginner
+
+### Add a User
+Create a new Linux user.
+
+```bash
+sudo adduser student1
+```
