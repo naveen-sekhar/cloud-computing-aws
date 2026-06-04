@@ -104,30 +104,21 @@ login as: ec2-user
 
 This will connect you to the EC2 instance.
 
-
---- 
+---
 # EC2 SSH Command Reference
 
 Essential Linux commands for students connected to AWS EC2 via SSH.
-
-## Difficulty Levels
-
-- Beginner
-- Intermediate
-- Advanced
 
 ---
 
 # 1. System Info
 
-## OS & Kernel Info
+### OS & Kernel Info
 See which Linux distro and kernel version is running.
 
 ```bash
 uname -a && cat /etc/os-release
 ```
-
-**Level:** Beginner
 
 ### CPU Info
 List CPU cores and architecture.
@@ -136,16 +127,12 @@ List CPU cores and architecture.
 lscpu
 ```
 
-**Level:** Beginner
-
 ### RAM Usage
 Check total and available memory.
 
 ```bash
 free -h
 ```
-
-**Level:** Beginner
 
 ### System Uptime
 How long the server has been running.
@@ -154,16 +141,12 @@ How long the server has been running.
 uptime
 ```
 
-**Level:** Beginner
-
 ### Environment Variables
 List all environment variables set in the session.
 
 ```bash
 printenv
 ```
-
-**Level:** Beginner
 
 ---
 
@@ -176,16 +159,12 @@ Show all files including hidden ones with details.
 ls -lah
 ```
 
-**Level:** Beginner
-
 ### Current Directory
 Print working directory.
 
 ```bash
 pwd
 ```
-
-**Level:** Beginner
 
 ### Create & Edit File
 Create a file and write to it.
@@ -195,16 +174,12 @@ echo 'Hello Cloud' > myfile.txt
 cat myfile.txt
 ```
 
-**Level:** Beginner
-
 ### Find Files
 Search for files by name recursively.
 
 ```bash
 find / -name '*.log' 2>/dev/null
 ```
-
-**Level:** Intermediate
 
 ### File Permissions
 Change file permissions.
@@ -214,8 +189,6 @@ chmod 755 myfile.txt
 ls -l myfile.txt
 ```
 
-**Level:** Intermediate
-
 ### Copy/Move Files
 Copy and move files between directories.
 
@@ -224,16 +197,12 @@ cp myfile.txt /tmp/
 mv /tmp/myfile.txt /tmp/backup.txt
 ```
 
-**Level:** Beginner
-
 ### Compress Files
 Create a tar.gz archive.
 
 ```bash
 tar -czvf archive.tar.gz /var/log/*.log
 ```
-
-**Level:** Intermediate
 
 ---
 
@@ -246,8 +215,6 @@ Show all currently running processes.
 ps aux
 ```
 
-**Level:** Beginner
-
 ### Live Process Monitor
 Real-time CPU and memory usage.
 
@@ -255,16 +222,12 @@ Real-time CPU and memory usage.
 top
 ```
 
-**Level:** Beginner
-
 ### Check Service Status
 Check if a service like nginx is running.
 
 ```bash
 systemctl status nginx
 ```
-
-**Level:** Beginner
 
 ---
 
@@ -277,16 +240,12 @@ Show network interfaces and IP addresses.
 ip addr show
 ```
 
-**Level:** Beginner
-
 ### Open Ports
 List all listening ports.
 
 ```bash
 ss -tuln
 ```
-
-**Level:** Intermediate
 
 ### Test Connectivity
 Ping a host to check internet access.
@@ -295,16 +254,12 @@ Ping a host to check internet access.
 ping -c 4 google.com
 ```
 
-**Level:** Beginner
-
 ### DNS Lookup
 Resolve a hostname to IP.
 
 ```bash
 nslookup example.com
 ```
-
-**Level:** Beginner
 
 ### Trace Route
 Trace hops to a destination.
@@ -313,16 +268,12 @@ Trace hops to a destination.
 traceroute google.com
 ```
 
-**Level:** Intermediate
-
 ### HTTP Request Test
 Test an HTTP endpoint (useful for APIs).
 
 ```bash
 curl -I https://google.com
 ```
-
-**Level:** Intermediate
 
 ---
 
@@ -335,8 +286,6 @@ See total disk space used per partition.
 df -h
 ```
 
-**Level:** Beginner
-
 ### Folder Size
 Find which folders use the most space.
 
@@ -344,16 +293,12 @@ Find which folders use the most space.
 du -sh /var/* 2>/dev/null | sort -rh | head -10
 ```
 
-**Level:** Intermediate
-
 ### List Block Devices
 Show all attached disks and EBS volumes.
 
 ```bash
 lsblk
 ```
-
-**Level:** Beginner
 
 ---
 
@@ -366,16 +311,12 @@ Who am I logged in as?
 whoami
 ```
 
-**Level:** Beginner
-
 ### All Users
 List all users on the system.
 
 ```bash
 cat /etc/passwd | cut -d: -f1
 ```
-
-**Level:** Beginner
 
 ### Add a User
 Create a new Linux user.
